@@ -7,8 +7,8 @@ def usage():
     *********
     Usage:
     *********
-    python ccaminfo.py <host> <command>
-    example -> ccaminfo.py localhost clients
+    python cccaminfo.py <host> <command>
+    example -> cccaminfo.py localhost clients
 
     *********
     Commands:

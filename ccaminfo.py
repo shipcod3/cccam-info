@@ -12,7 +12,8 @@ def usage():
 
     *********
     Commands:
-    *********    
+    *********
+    - info
     - activeclients
     - clients
     - servers

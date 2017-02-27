@@ -1,5 +1,5 @@
 # cccam-info
-A python script that gets CCcam information
+A python script that gets CCcam information mostly from satellite receivers
 
 # Sample Output
 

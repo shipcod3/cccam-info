@@ -3,7 +3,7 @@ import telnetlib
 
 def usage():
     print """
-    ccaminfo - by Jay Turla @shipcod3
+    cccaminfo - by Jay Turla @shipcod3
     *********
     Usage:
     *********

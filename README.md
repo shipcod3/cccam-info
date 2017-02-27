@@ -1,4 +1,4 @@
-# ccam-info
+# cccam-info
 A python script that gets CCcam information
 
 # Sample Output

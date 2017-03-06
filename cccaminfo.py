@@ -30,7 +30,8 @@ def main(argv):
     command = sys.argv[2]
     tn = telnetlib.Telnet(host, 16000)
     tn.read_until("Welcome to the CCcam information client.")
-    tn.write(command+"\r")
+    print "[+] Getting information on the receiver"
+    tn.write("info\r")
     print tn.read_all()
 
 if __name__ == "__main__":

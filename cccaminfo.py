@@ -59,7 +59,7 @@ def main(argv):
     #shares command
     tn = telnetlib.Telnet(host, 16000)
     tn.read_until("Welcome to the CCcam information client.")
-    print "[+] Active clients\n"
+    print "[+] Shares\n"
     tn.write("shares\r")
     print tn.read_all()
 

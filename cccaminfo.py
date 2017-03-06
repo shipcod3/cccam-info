@@ -7,12 +7,12 @@ def usage():
     *********
     Usage:
     *********
-    python cccaminfo.py <host> <command>
-    example -> cccaminfo.py localhost clients
-
-    *********
-    Commands:
-    *********
+    python cccaminfo.py <host>
+    example -> cccaminfo.py localhost
+    """
+    
+"""
+    Supported Commands:
     - info
     - activeclients
     - clients
@@ -20,14 +20,13 @@ def usage():
     - shares
     - providers
     - entitlements
-    """
+"""
 
 def main(argv):
-    if len(argv) < 3:
+    if len(argv) < 2:
         return usage()
 
     host = sys.argv[1]
-    command = sys.argv[2]
     
     #info command
     tn = telnetlib.Telnet(host, 16000)
@@ -43,18 +42,18 @@ def main(argv):
     tn.write("activeclients\r")
     print tn.read_all()
 
-    #activeclients command
-    tn = telnetlib.Telnet(host, 16000)
-    tn.read_until("Welcome to the CCcam information client.")
-    print "[+] Active clients\n"
-    tn.write("info\r")
-    print tn.read_all()
-    
     #clients command
     tn = telnetlib.Telnet(host, 16000)
     tn.read_until("Welcome to the CCcam information client.")
     print "[+] Clients\n"
     tn.write("clients\r")
+    print tn.read_all()
+
+    #servers command
+    tn = telnetlib.Telnet(host, 16000)
+    tn.read_until("Welcome to the CCcam information client.")
+    print "[+] Servers\n"
+    tn.write("servers\r")
     print tn.read_all()
     
     #shares command

@@ -40,7 +40,7 @@ def main(argv):
     tn = telnetlib.Telnet(host, 16000)
     tn.read_until("Welcome to the CCcam information client.")
     print "[+] Active clients\n"
-    tn.write("info\r")
+    tn.write("activeclients\r")
     print tn.read_all()
 
     #activeclients command

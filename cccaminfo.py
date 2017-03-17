@@ -4,6 +4,7 @@ import telnetlib
 def usage():
     print """
     cccaminfo - by Jay Turla @shipcod3
+
     *********
     Usage:
     *********
